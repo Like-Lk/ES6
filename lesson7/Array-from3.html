@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>991</p>
+    <p>992</p>
+    <p>993</p>
+    <p>994</p>
+    <p>995</p>
+    <p>996</p>
+    <p>997</p>
+    <p>998</p>
+    <p>999</p>
+    <p>9910</p>
+</body>
+</html>
+<script>
+    // filter过滤
+    let aLi = document.querySelectorAll("p");
+    let arr = Array.from(aLi);
+    let result = arr.filter(function(item){
+        if (item.textContent.length > 2 && item.textContent.length <4) {
+            return true;
+        }
+    });
+
+    result.forEach(function(item,index){
+        item.onclick = function () {
+            alert(this.innerHTML)
+        }
+    })
+</script>
